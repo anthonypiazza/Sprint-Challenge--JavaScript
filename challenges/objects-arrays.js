@@ -94,11 +94,25 @@ console.log(contactInfo);
 // /* Request 3: Find out how many universities have the string "Uni" included in their name. 
 // // Create a new array called uni that contains them all. Log the result. */
 
+// const uni = [];
+
+// graduates.forEach((uniNameString) => {
+//   let finalUni = `${uniNameString.university.includes('Uni')}`;
+//   uni.push(finalUni);
+// });
+
 const uni = [];
 
-graduates.filter((uniNameString) => {
-  let finalUni = `${uniNameString.university.contains('uni')}`;
-  uni.push(finalUni);
+graduates.forEach((uniNameString) => {
+  function finalUni() {
+    if (`${uniNameString.university.includes('Uni')}` === true){
+      return `${uniNameString.university}`;
+    }
+    else {
+      return null;
+    }
+  }
+  uni.push(uniNameString.university.includes('Uni'));
 });
 
 console.log(uni);
