@@ -8,10 +8,10 @@ class CuboidMaker1 {
         this.height = attrs.height;
     }
     volume() {
-        return `${this.length}` * `${this.width}` * `${this.height}`;
+        return this.length * this.width * this.height;
     }
     surfaceArea(){
-        return (2 * ((`${this.length}`*`${this.width}`)+(`${this.length}`*`${this.height}`)+(`${this.width}`*`${this.height}`)));
+        return 2 * ((this.length*this.width)+(this.length*this.height)+(this.width*this.height));
     }
 }
 

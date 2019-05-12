@@ -104,15 +104,9 @@ console.log(contactInfo);
 const uni = [];
 
 graduates.forEach((uniNameString) => {
-  function finalUni() {
-    if (`${uniNameString.university.includes('Uni')}` === true){
-      return `${uniNameString.university}`;
-    }
-    else {
-      return null;
-    }
+  if (uniNameString.university.includes('Uni') === true){
+    uni.push(uniNameString.university);
   }
-  uni.push(uniNameString.university.includes('Uni'));
 });
 
 console.log(uni);
